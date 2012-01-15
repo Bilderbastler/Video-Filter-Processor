@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AC4F79014C358FE001E9D71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F78F14C358FE001E9D71 /* Cocoa.framework */; };
+		9AC4F79A14C358FE001E9D71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F79814C358FE001E9D71 /* InfoPlist.strings */; };
+		9AC4F79C14C358FE001E9D71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F79B14C358FE001E9D71 /* main.m */; };
+		9AC4F7A014C358FE001E9D71 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F79E14C358FE001E9D71 /* Credits.rtf */; };
+		9AC4F7A314C358FE001E9D71 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7A214C358FE001E9D71 /* Document.m */; };
+		9AC4F7A614C358FE001E9D71 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F7A414C358FE001E9D71 /* Document.xib */; };
+		9AC4F7A914C358FE001E9D71 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F7A714C358FE001E9D71 /* MainMenu.xib */; };
+		9AC4F7B114C358FE001E9D71 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7B014C358FE001E9D71 /* SenTestingKit.framework */; };
+		9AC4F7B214C358FE001E9D71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F78F14C358FE001E9D71 /* Cocoa.framework */; };
+		9AC4F7BA14C358FE001E9D71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F7B814C358FE001E9D71 /* InfoPlist.strings */; };
+		9AC4F7BD14C358FE001E9D71 /* Video_Filter_ProcessorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7BC14C358FE001E9D71 /* Video_Filter_ProcessorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AC4F7B314C358FE001E9D71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC4F78214C358FD001E9D71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC4F78A14C358FE001E9D71;
+			remoteInfo = "Video Filter Processor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9AC4F78B14C358FE001E9D71 /* Video Filter Processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Filter Processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC4F78F14C358FE001E9D71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9AC4F79214C358FE001E9D71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9AC4F79314C358FE001E9D71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9AC4F79414C358FE001E9D71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9AC4F79714C358FE001E9D71 /* Video Filter Processor-Info.plist */ = {isa = PBXFileReference; path = "Video Filter Processor-Info.plist"; sourceTree = "<group>"; };
+		9AC4F79914C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AC4F79B14C358FE001E9D71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AC4F79D14C358FE001E9D71 /* Video Filter Processor-Prefix.pch */ = {isa = PBXFileReference; path = "Video Filter Processor-Prefix.pch"; sourceTree = "<group>"; };
+		9AC4F79F14C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9AC4F7A114C358FE001E9D71 /* Document.h */ = {isa = PBXFileReference; path = Document.h; sourceTree = "<group>"; };
+		9AC4F7A214C358FE001E9D71 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		9AC4F7A514C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
+		9AC4F7A814C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9AC4F7AF14C358FE001E9D71 /* Video Filter ProcessorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Video Filter ProcessorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC4F7B014C358FE001E9D71 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9AC4F7B714C358FE001E9D71 /* Video Filter ProcessorTests-Info.plist */ = {isa = PBXFileReference; path = "Video Filter ProcessorTests-Info.plist"; sourceTree = "<group>"; };
+		9AC4F7B914C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AC4F7BB14C358FE001E9D71 /* Video_Filter_ProcessorTests.h */ = {isa = PBXFileReference; path = Video_Filter_ProcessorTests.h; sourceTree = "<group>"; };
+		9AC4F7BC14C358FE001E9D71 /* Video_Filter_ProcessorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video_Filter_ProcessorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AC4F78814C358FE001E9D71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC4F79014C358FE001E9D71 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC4F7AB14C358FE001E9D71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC4F7B114C358FE001E9D71 /* SenTestingKit.framework in Frameworks */,
+				9AC4F7B214C358FE001E9D71 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AC4F78014C358FD001E9D71 = {
+			isa = PBXGroup;
+			children = (
+				9AC4F79514C358FE001E9D71 /* Video Filter Processor */,
+				9AC4F7B514C358FE001E9D71 /* Video Filter ProcessorTests */,
+				9AC4F78E14C358FE001E9D71 /* Frameworks */,
+				9AC4F78C14C358FE001E9D71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AC4F78C14C358FE001E9D71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F78B14C358FE001E9D71 /* Video Filter Processor.app */,
+				9AC4F7AF14C358FE001E9D71 /* Video Filter ProcessorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AC4F78E14C358FE001E9D71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F78F14C358FE001E9D71 /* Cocoa.framework */,
+				9AC4F7B014C358FE001E9D71 /* SenTestingKit.framework */,
+				9AC4F79114C358FE001E9D71 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AC4F79114C358FE001E9D71 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F79214C358FE001E9D71 /* AppKit.framework */,
+				9AC4F79314C358FE001E9D71 /* CoreData.framework */,
+				9AC4F79414C358FE001E9D71 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9AC4F79514C358FE001E9D71 /* Video Filter Processor */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F7A114C358FE001E9D71 /* Document.h */,
+				9AC4F7A214C358FE001E9D71 /* Document.m */,
+				9AC4F7A414C358FE001E9D71 /* Document.xib */,
+				9AC4F7A714C358FE001E9D71 /* MainMenu.xib */,
+				9AC4F79614C358FE001E9D71 /* Supporting Files */,
+			);
+			path = "Video Filter Processor";
+			sourceTree = "<group>";
+		};
+		9AC4F79614C358FE001E9D71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F79714C358FE001E9D71 /* Video Filter Processor-Info.plist */,
+				9AC4F79814C358FE001E9D71 /* InfoPlist.strings */,
+				9AC4F79B14C358FE001E9D71 /* main.m */,
+				9AC4F79D14C358FE001E9D71 /* Video Filter Processor-Prefix.pch */,
+				9AC4F79E14C358FE001E9D71 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AC4F7B514C358FE001E9D71 /* Video Filter ProcessorTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F7BB14C358FE001E9D71 /* Video_Filter_ProcessorTests.h */,
+				9AC4F7BC14C358FE001E9D71 /* Video_Filter_ProcessorTests.m */,
+				9AC4F7B614C358FE001E9D71 /* Supporting Files */,
+			);
+			path = "Video Filter ProcessorTests";
+			sourceTree = "<group>";
+		};
+		9AC4F7B614C358FE001E9D71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F7B714C358FE001E9D71 /* Video Filter ProcessorTests-Info.plist */,
+				9AC4F7B814C358FE001E9D71 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AC4F78A14C358FE001E9D71 /* Video Filter Processor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AC4F7C014C358FE001E9D71 /* Build configuration list for PBXNativeTarget "Video Filter Processor" */;
+			buildPhases = (
+				9AC4F78714C358FE001E9D71 /* Sources */,
+				9AC4F78814C358FE001E9D71 /* Frameworks */,
+				9AC4F78914C358FE001E9D71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Video Filter Processor";
+			productName = "Video Filter Processor";
+			productReference = 9AC4F78B14C358FE001E9D71 /* Video Filter Processor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9AC4F7AE14C358FE001E9D71 /* Video Filter ProcessorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AC4F7C314C358FE001E9D71 /* Build configuration list for PBXNativeTarget "Video Filter ProcessorTests" */;
+			buildPhases = (
+				9AC4F7AA14C358FE001E9D71 /* Sources */,
+				9AC4F7AB14C358FE001E9D71 /* Frameworks */,
+				9AC4F7AC14C358FE001E9D71 /* Resources */,
+				9AC4F7AD14C358FE001E9D71 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AC4F7B414C358FE001E9D71 /* PBXTargetDependency */,
+			);
+			name = "Video Filter ProcessorTests";
+			productName = "Video Filter ProcessorTests";
+			productReference = 9AC4F7AF14C358FE001E9D71 /* Video Filter ProcessorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AC4F78214C358FD001E9D71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 9AC4F78514C358FD001E9D71 /* Build configuration list for PBXProject "Video Filter Processor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9AC4F78014C358FD001E9D71;
+			productRefGroup = 9AC4F78C14C358FE001E9D71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AC4F78A14C358FE001E9D71 /* Video Filter Processor */,
+				9AC4F7AE14C358FE001E9D71 /* Video Filter ProcessorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AC4F78914C358FE001E9D71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC4F79A14C358FE001E9D71 /* InfoPlist.strings in Resources */,
+				9AC4F7A014C358FE001E9D71 /* Credits.rtf in Resources */,
+				9AC4F7A614C358FE001E9D71 /* Document.xib in Resources */,
+				9AC4F7A914C358FE001E9D71 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC4F7AC14C358FE001E9D71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC4F7BA14C358FE001E9D71 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9AC4F7AD14C358FE001E9D71 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AC4F78714C358FE001E9D71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC4F79C14C358FE001E9D71 /* main.m in Sources */,
+				9AC4F7A314C358FE001E9D71 /* Document.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC4F7AA14C358FE001E9D71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC4F7BD14C358FE001E9D71 /* Video_Filter_ProcessorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AC4F7B414C358FE001E9D71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AC4F78A14C358FE001E9D71 /* Video Filter Processor */;
+			targetProxy = 9AC4F7B314C358FE001E9D71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AC4F79814C358FE001E9D71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AC4F79914C358FE001E9D71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9AC4F79E14C358FE001E9D71 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AC4F79F14C358FE001E9D71 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9AC4F7A414C358FE001E9D71 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AC4F7A514C358FE001E9D71 /* en */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		9AC4F7A714C358FE001E9D71 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AC4F7A814C358FE001E9D71 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		9AC4F7B814C358FE001E9D71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AC4F7B914C358FE001E9D71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AC4F7BE14C358FE001E9D71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9AC4F7BF14C358FE001E9D71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9AC4F7C114C358FE001E9D71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
+				INFOPLIST_FILE = "Video Filter Processor/Video Filter Processor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9AC4F7C214C358FE001E9D71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
+				INFOPLIST_FILE = "Video Filter Processor/Video Filter Processor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9AC4F7C414C358FE001E9D71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Video Filter Processor.app/Contents/MacOS/Video Filter Processor";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
+				INFOPLIST_FILE = "Video Filter ProcessorTests/Video Filter ProcessorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9AC4F7C514C358FE001E9D71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Video Filter Processor.app/Contents/MacOS/Video Filter Processor";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
+				INFOPLIST_FILE = "Video Filter ProcessorTests/Video Filter ProcessorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AC4F78514C358FD001E9D71 /* Build configuration list for PBXProject "Video Filter Processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC4F7BE14C358FE001E9D71 /* Debug */,
+				9AC4F7BF14C358FE001E9D71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AC4F7C014C358FE001E9D71 /* Build configuration list for PBXNativeTarget "Video Filter Processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC4F7C114C358FE001E9D71 /* Debug */,
+				9AC4F7C214C358FE001E9D71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AC4F7C314C358FE001E9D71 /* Build configuration list for PBXNativeTarget "Video Filter ProcessorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC4F7C414C358FE001E9D71 /* Debug */,
+				9AC4F7C514C358FE001E9D71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AC4F78214C358FD001E9D71 /* Project object */;
+}
