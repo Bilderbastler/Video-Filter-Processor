@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A183EDE158A56B800400447 /* SingleThreadFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A183EDC158A56B700400447 /* SingleThreadFilterController.m */; };
+		9A183EDF158A56B800400447 /* SingleThreadFilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A183EDD158A56B800400447 /* SingleThreadFilterController.xib */; };
+		9A2649B515A0B9A4004A26F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2649B415A0B9A4004A26F8 /* AppDelegate.m */; };
+		9A3A44DE1585287A00B188CA /* FilterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A44DD1585287A00B188CA /* FilterFactory.m */; };
+		9A41173914CF4FD100D3D942 /* AbsVideoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A41173814CF4FD100D3D942 /* AbsVideoFilter.m */; };
+		9A57941714D376500006EE0F /* Interface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A57941614D376500006EE0F /* Interface.xib */; };
+		9A57941B14D378660006EE0F /* InterfaceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A57941A14D378660006EE0F /* InterfaceWindowController.m */; };
+		9A60D54114CDF60000E0CC0F /* VideoFrameScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A60D54014CDF60000E0CC0F /* VideoFrameScreen.m */; };
+		9A89EC7114E9D2E20028D6BC /* VideoFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A89EC7014E9D2E20028D6BC /* VideoFilterController.m */; };
+		9A89EC7514F3010B0028D6BC /* SingleThreadedFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A89EC7414F3010B0028D6BC /* SingleThreadedFilter.m */; };
 		9AC4F79014C358FE001E9D71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F78F14C358FE001E9D71 /* Cocoa.framework */; };
 		9AC4F79A14C358FE001E9D71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F79814C358FE001E9D71 /* InfoPlist.strings */; };
 		9AC4F79C14C358FE001E9D71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F79B14C358FE001E9D71 /* main.m */; };
@@ -18,6 +28,14 @@
 		9AC4F7B214C358FE001E9D71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F78F14C358FE001E9D71 /* Cocoa.framework */; };
 		9AC4F7BA14C358FE001E9D71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AC4F7B814C358FE001E9D71 /* InfoPlist.strings */; };
 		9AC4F7BD14C358FE001E9D71 /* Video_Filter_ProcessorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7BC14C358FE001E9D71 /* Video_Filter_ProcessorTests.m */; };
+		9AC4F7C714C35941001E9D71 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7C614C35941001E9D71 /* OpenCL.framework */; };
+		9AC4F7D214C36418001E9D71 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7D114C36418001E9D71 /* AVFoundation.framework */; };
+		9AC4F7D414C3642C001E9D71 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7D314C3642C001E9D71 /* CoreMedia.framework */; };
+		9AC4F7D614C3644C001E9D71 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7D514C3644C001E9D71 /* CoreVideo.framework */; };
+		9AC4F7D814C36469001E9D71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7D714C36469001E9D71 /* QuartzCore.framework */; };
+		9AC4F7DF14C374AC001E9D71 /* VideoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7DE14C374AC001E9D71 /* VideoWindowController.m */; };
+		9AC4F7E514C38A14001E9D71 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7E414C38A14001E9D71 /* PlayerModel.m */; };
+		9AC4F7E614C38A14001E9D71 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7E414C38A14001E9D71 /* PlayerModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,26 +49,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A183EDB158A56B700400447 /* SingleThreadFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadFilterController.h; sourceTree = "<group>"; };
+		9A183EDC158A56B700400447 /* SingleThreadFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleThreadFilterController.m; sourceTree = "<group>"; };
+		9A183EDD158A56B800400447 /* SingleThreadFilterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleThreadFilterController.xib; sourceTree = "<group>"; };
+		9A2649B315A0B9A4004A26F8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9A2649B415A0B9A4004A26F8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9A3A44DC1585287A00B188CA /* FilterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterFactory.h; sourceTree = "<group>"; };
+		9A3A44DD1585287A00B188CA /* FilterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterFactory.m; sourceTree = "<group>"; };
+		9A41173714CF4FD100D3D942 /* AbsVideoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsVideoFilter.h; sourceTree = "<group>"; };
+		9A41173814CF4FD100D3D942 /* AbsVideoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsVideoFilter.m; sourceTree = "<group>"; };
+		9A57941614D376500006EE0F /* Interface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Interface.xib; sourceTree = "<group>"; };
+		9A57941914D378660006EE0F /* InterfaceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceWindowController.h; sourceTree = "<group>"; };
+		9A57941A14D378660006EE0F /* InterfaceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceWindowController.m; sourceTree = "<group>"; };
+		9A60D53F14CDF60000E0CC0F /* VideoFrameScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFrameScreen.h; sourceTree = "<group>"; };
+		9A60D54014CDF60000E0CC0F /* VideoFrameScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFrameScreen.m; sourceTree = "<group>"; };
+		9A89EC6F14E9D2E20028D6BC /* VideoFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFilterController.h; sourceTree = "<group>"; };
+		9A89EC7014E9D2E20028D6BC /* VideoFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFilterController.m; sourceTree = "<group>"; };
+		9A89EC7314F3010B0028D6BC /* SingleThreadedFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadedFilter.h; sourceTree = "<group>"; };
+		9A89EC7414F3010B0028D6BC /* SingleThreadedFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleThreadedFilter.m; sourceTree = "<group>"; };
 		9AC4F78B14C358FE001E9D71 /* Video Filter Processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Filter Processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC4F78F14C358FE001E9D71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9AC4F79214C358FE001E9D71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9AC4F79314C358FE001E9D71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9AC4F79414C358FE001E9D71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9AC4F79714C358FE001E9D71 /* Video Filter Processor-Info.plist */ = {isa = PBXFileReference; path = "Video Filter Processor-Info.plist"; sourceTree = "<group>"; };
+		9AC4F79714C358FE001E9D71 /* Video Filter Processor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Video Filter Processor-Info.plist"; sourceTree = "<group>"; };
 		9AC4F79914C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AC4F79B14C358FE001E9D71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9AC4F79D14C358FE001E9D71 /* Video Filter Processor-Prefix.pch */ = {isa = PBXFileReference; path = "Video Filter Processor-Prefix.pch"; sourceTree = "<group>"; };
+		9AC4F79D14C358FE001E9D71 /* Video Filter Processor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Video Filter Processor-Prefix.pch"; sourceTree = "<group>"; };
 		9AC4F79F14C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		9AC4F7A114C358FE001E9D71 /* Document.h */ = {isa = PBXFileReference; path = Document.h; sourceTree = "<group>"; };
+		9AC4F7A114C358FE001E9D71 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		9AC4F7A214C358FE001E9D71 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		9AC4F7A514C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
 		9AC4F7A814C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9AC4F7AF14C358FE001E9D71 /* Video Filter ProcessorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Video Filter ProcessorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC4F7B014C358FE001E9D71 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9AC4F7B714C358FE001E9D71 /* Video Filter ProcessorTests-Info.plist */ = {isa = PBXFileReference; path = "Video Filter ProcessorTests-Info.plist"; sourceTree = "<group>"; };
+		9AC4F7B714C358FE001E9D71 /* Video Filter ProcessorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Video Filter ProcessorTests-Info.plist"; sourceTree = "<group>"; };
 		9AC4F7B914C358FE001E9D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9AC4F7BB14C358FE001E9D71 /* Video_Filter_ProcessorTests.h */ = {isa = PBXFileReference; path = Video_Filter_ProcessorTests.h; sourceTree = "<group>"; };
+		9AC4F7BB14C358FE001E9D71 /* Video_Filter_ProcessorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video_Filter_ProcessorTests.h; sourceTree = "<group>"; };
 		9AC4F7BC14C358FE001E9D71 /* Video_Filter_ProcessorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video_Filter_ProcessorTests.m; sourceTree = "<group>"; };
+		9AC4F7C614C35941001E9D71 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		9AC4F7D114C36418001E9D71 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9AC4F7D314C3642C001E9D71 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9AC4F7D514C3644C001E9D71 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9AC4F7D714C36469001E9D71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9AC4F7DD14C374AC001E9D71 /* VideoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWindowController.h; sourceTree = "<group>"; };
+		9AC4F7DE14C374AC001E9D71 /* VideoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWindowController.m; sourceTree = "<group>"; };
+		9AC4F7E314C38A14001E9D71 /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = ../PlayerModel.h; sourceTree = "<group>"; };
+		9AC4F7E414C38A14001E9D71 /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerModel.m; path = ../PlayerModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +103,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC4F7D814C36469001E9D71 /* QuartzCore.framework in Frameworks */,
+				9AC4F7D614C3644C001E9D71 /* CoreVideo.framework in Frameworks */,
+				9AC4F7D414C3642C001E9D71 /* CoreMedia.framework in Frameworks */,
+				9AC4F7D214C36418001E9D71 /* AVFoundation.framework in Frameworks */,
+				9AC4F7C714C35941001E9D71 /* OpenCL.framework in Frameworks */,
 				9AC4F79014C358FE001E9D71 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +124,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A3A44DA1585284100B188CA /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				9A3A44DC1585287A00B188CA /* FilterFactory.h */,
+				9A3A44DD1585287A00B188CA /* FilterFactory.m */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		9A89EC6E14E82C590028D6BC /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				9A41173714CF4FD100D3D942 /* AbsVideoFilter.h */,
+				9A41173814CF4FD100D3D942 /* AbsVideoFilter.m */,
+				9A89EC7314F3010B0028D6BC /* SingleThreadedFilter.h */,
+				9A89EC7414F3010B0028D6BC /* SingleThreadedFilter.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		9A89EC7214E9D5180028D6BC /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				9A89EC6F14E9D2E20028D6BC /* VideoFilterController.h */,
+				9A89EC7014E9D2E20028D6BC /* VideoFilterController.m */,
+				9A183EDB158A56B700400447 /* SingleThreadFilterController.h */,
+				9A183EDC158A56B700400447 /* SingleThreadFilterController.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
 		9AC4F78014C358FD001E9D71 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +177,10 @@
 		9AC4F78E14C358FE001E9D71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AC4F7D714C36469001E9D71 /* QuartzCore.framework */,
+				9AC4F7D514C3644C001E9D71 /* CoreVideo.framework */,
+				9AC4F7D314C3642C001E9D71 /* CoreMedia.framework */,
+				9AC4F7D114C36418001E9D71 /* AVFoundation.framework */,
 				9AC4F78F14C358FE001E9D71 /* Cocoa.framework */,
 				9AC4F7B014C358FE001E9D71 /* SenTestingKit.framework */,
 				9AC4F79114C358FE001E9D71 /* Other Frameworks */,
@@ -106,6 +191,7 @@
 		9AC4F79114C358FE001E9D71 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AC4F7C614C35941001E9D71 /* OpenCL.framework */,
 				9AC4F79214C358FE001E9D71 /* AppKit.framework */,
 				9AC4F79314C358FE001E9D71 /* CoreData.framework */,
 				9AC4F79414C358FE001E9D71 /* Foundation.framework */,
@@ -116,11 +202,13 @@
 		9AC4F79514C358FE001E9D71 /* Video Filter Processor */ = {
 			isa = PBXGroup;
 			children = (
-				9AC4F7A114C358FE001E9D71 /* Document.h */,
-				9AC4F7A214C358FE001E9D71 /* Document.m */,
-				9AC4F7A414C358FE001E9D71 /* Document.xib */,
-				9AC4F7A714C358FE001E9D71 /* MainMenu.xib */,
+				9A3A44DA1585284100B188CA /* Factories */,
+				9ACB68BE14C4E61C00822BFF /* View */,
+				9ACB68BC14C4E60C00822BFF /* Model */,
+				9ACB68BF14C4E64C00822BFF /* Controller */,
 				9AC4F79614C358FE001E9D71 /* Supporting Files */,
+				9A2649B315A0B9A4004A26F8 /* AppDelegate.h */,
+				9A2649B415A0B9A4004A26F8 /* AppDelegate.m */,
 			);
 			path = "Video Filter Processor";
 			sourceTree = "<group>";
@@ -154,6 +242,43 @@
 				9AC4F7B814C358FE001E9D71 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9ACB68BC14C4E60C00822BFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A89EC6E14E82C590028D6BC /* Filter */,
+				9AC4F7A114C358FE001E9D71 /* Document.h */,
+				9AC4F7A214C358FE001E9D71 /* Document.m */,
+				9AC4F7E314C38A14001E9D71 /* PlayerModel.h */,
+				9AC4F7E414C38A14001E9D71 /* PlayerModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9ACB68BE14C4E61C00822BFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4F7A714C358FE001E9D71 /* MainMenu.xib */,
+				9AC4F7A414C358FE001E9D71 /* Document.xib */,
+				9A57941614D376500006EE0F /* Interface.xib */,
+				9A183EDD158A56B800400447 /* SingleThreadFilterController.xib */,
+				9A60D53F14CDF60000E0CC0F /* VideoFrameScreen.h */,
+				9A60D54014CDF60000E0CC0F /* VideoFrameScreen.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9ACB68BF14C4E64C00822BFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A89EC7214E9D5180028D6BC /* Filter */,
+				9AC4F7DD14C374AC001E9D71 /* VideoWindowController.h */,
+				9AC4F7DE14C374AC001E9D71 /* VideoWindowController.m */,
+				9A57941914D378660006EE0F /* InterfaceWindowController.h */,
+				9A57941A14D378660006EE0F /* InterfaceWindowController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +326,7 @@
 		9AC4F78214C358FD001E9D71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 9AC4F78514C358FD001E9D71 /* Build configuration list for PBXProject "Video Filter Processor" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -209,6 +334,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 9AC4F78014C358FD001E9D71;
 			productRefGroup = 9AC4F78C14C358FE001E9D71 /* Products */;
@@ -230,6 +356,8 @@
 				9AC4F7A014C358FE001E9D71 /* Credits.rtf in Resources */,
 				9AC4F7A614C358FE001E9D71 /* Document.xib in Resources */,
 				9AC4F7A914C358FE001E9D71 /* MainMenu.xib in Resources */,
+				9A57941714D376500006EE0F /* Interface.xib in Resources */,
+				9A183EDF158A56B800400447 /* SingleThreadFilterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +394,16 @@
 			files = (
 				9AC4F79C14C358FE001E9D71 /* main.m in Sources */,
 				9AC4F7A314C358FE001E9D71 /* Document.m in Sources */,
+				9AC4F7DF14C374AC001E9D71 /* VideoWindowController.m in Sources */,
+				9AC4F7E514C38A14001E9D71 /* PlayerModel.m in Sources */,
+				9A60D54114CDF60000E0CC0F /* VideoFrameScreen.m in Sources */,
+				9A41173914CF4FD100D3D942 /* AbsVideoFilter.m in Sources */,
+				9A57941B14D378660006EE0F /* InterfaceWindowController.m in Sources */,
+				9A89EC7114E9D2E20028D6BC /* VideoFilterController.m in Sources */,
+				9A89EC7514F3010B0028D6BC /* SingleThreadedFilter.m in Sources */,
+				9A3A44DE1585287A00B188CA /* FilterFactory.m in Sources */,
+				9A183EDE158A56B800400447 /* SingleThreadFilterController.m in Sources */,
+				9A2649B515A0B9A4004A26F8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC4F7BD14C358FE001E9D71 /* Video_Filter_ProcessorTests.m in Sources */,
+				9AC4F7E614C38A14001E9D71 /* PlayerModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +584,7 @@
 				9AC4F7C214C358FE001E9D71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AC4F7C314C358FE001E9D71 /* Build configuration list for PBXNativeTarget "Video Filter ProcessorTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +593,7 @@
 				9AC4F7C514C358FE001E9D71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
