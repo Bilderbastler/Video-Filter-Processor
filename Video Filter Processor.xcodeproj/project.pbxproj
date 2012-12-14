@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A15F55F163CB317001CA11C /* ColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CC0AF163C51CF001624B9 /* ColorWheel.m */; };
 		9A183EDE158A56B800400447 /* SingleThreadFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A183EDC158A56B700400447 /* SingleThreadFilterController.m */; };
 		9A183EDF158A56B800400447 /* SingleThreadFilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A183EDD158A56B800400447 /* SingleThreadFilterController.xib */; };
+		9A1979CB166D26E5001108CC /* OpenCLFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1979CA166D26E5001108CC /* OpenCLFilter.m */; };
+		9A1979D6166E7A0D001108CC /* filterKernel.cl in Sources */ = {isa = PBXBuildFile; fileRef = 9A1979D5166E7A0D001108CC /* filterKernel.cl */; };
+		9A1CC0B0163C51CF001624B9 /* ColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CC0AF163C51CF001624B9 /* ColorWheel.m */; };
+		9A1CC0B4163C5FD6001624B9 /* color-pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1CC0B2163C5FD6001624B9 /* color-pointer.png */; };
+		9A1CC0B5163C5FD6001624B9 /* color-wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1CC0B3163C5FD6001624B9 /* color-wheel.png */; };
 		9A2649B515A0B9A4004A26F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2649B415A0B9A4004A26F8 /* AppDelegate.m */; };
 		9A3A44DE1585287A00B188CA /* FilterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3A44DD1585287A00B188CA /* FilterFactory.m */; };
 		9A41173914CF4FD100D3D942 /* AbsVideoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A41173814CF4FD100D3D942 /* AbsVideoFilter.m */; };
+		9A49B79F166035DB00D82111 /* OperationQueueFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B79E166035DB00D82111 /* OperationQueueFilter.m */; };
+		9A49B7A416603AA800D82111 /* OperationQueueFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A49B7A216603AA800D82111 /* OperationQueueFilterController.m */; };
+		9A49B7A516603AA800D82111 /* OperationQueueFilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A49B7A316603AA800D82111 /* OperationQueueFilterController.xib */; };
 		9A57941714D376500006EE0F /* Interface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A57941614D376500006EE0F /* Interface.xib */; };
 		9A57941B14D378660006EE0F /* InterfaceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A57941A14D378660006EE0F /* InterfaceWindowController.m */; };
 		9A60D54114CDF60000E0CC0F /* VideoFrameScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A60D54014CDF60000E0CC0F /* VideoFrameScreen.m */; };
+		9A70A67B167697BA005A8CF8 /* filterKernel.cl in Resources */ = {isa = PBXBuildFile; fileRef = 9A1979D5166E7A0D001108CC /* filterKernel.cl */; };
+		9A70A67D16769AFD005A8CF8 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F7C614C35941001E9D71 /* OpenCL.framework */; };
 		9A89EC7114E9D2E20028D6BC /* VideoFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A89EC7014E9D2E20028D6BC /* VideoFilterController.m */; };
 		9A89EC7514F3010B0028D6BC /* SingleThreadedFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A89EC7414F3010B0028D6BC /* SingleThreadedFilter.m */; };
 		9AC4F79014C358FE001E9D71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4F78F14C358FE001E9D71 /* Cocoa.framework */; };
@@ -36,6 +47,14 @@
 		9AC4F7DF14C374AC001E9D71 /* VideoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7DE14C374AC001E9D71 /* VideoWindowController.m */; };
 		9AC4F7E514C38A14001E9D71 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7E414C38A14001E9D71 /* PlayerModel.m */; };
 		9AC4F7E614C38A14001E9D71 /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4F7E414C38A14001E9D71 /* PlayerModel.m */; };
+		9AEEE92D1656AC150025DFAB /* GCDFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEE92C1656AC150025DFAB /* GCDFilter.m */; };
+		9AEEE9321656EDD50025DFAB /* GCDFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEE9301656EDD50025DFAB /* GCDFilterController.m */; };
+		9AEEE9331656EDD50025DFAB /* GCDFilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEEE9311656EDD50025DFAB /* GCDFilterController.xib */; };
+		9AEEE9371656FBE10025DFAB /* OpenCLFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEE9351656FBE10025DFAB /* OpenCLFilterController.m */; };
+		9AEEE9381656FBE10025DFAB /* OpenCLFilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEEE9361656FBE10025DFAB /* OpenCLFilterController.xib */; };
+		9AF2B32C164FF5460008B536 /* NSThreadFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2B32B164FF5450008B536 /* NSThreadFilter.m */; };
+		9AF2B331165062CF0008B536 /* NSThreadFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2B32F165062CF0008B536 /* NSThreadFilterController.m */; };
+		9AF2B332165062CF0008B536 /* NSThreadFilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF2B330165062CF0008B536 /* NSThreadFilterController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +71,24 @@
 		9A183EDB158A56B700400447 /* SingleThreadFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleThreadFilterController.h; sourceTree = "<group>"; };
 		9A183EDC158A56B700400447 /* SingleThreadFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleThreadFilterController.m; sourceTree = "<group>"; };
 		9A183EDD158A56B800400447 /* SingleThreadFilterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleThreadFilterController.xib; sourceTree = "<group>"; };
+		9A1979C9166D26E5001108CC /* OpenCLFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLFilter.h; sourceTree = "<group>"; };
+		9A1979CA166D26E5001108CC /* OpenCLFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCLFilter.m; sourceTree = "<group>"; };
+		9A1979D5166E7A0D001108CC /* filterKernel.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = filterKernel.cl; sourceTree = "<group>"; };
+		9A1CC0AE163C51CF001624B9 /* ColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorWheel.h; sourceTree = "<group>"; };
+		9A1CC0AF163C51CF001624B9 /* ColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorWheel.m; sourceTree = "<group>"; };
+		9A1CC0B2163C5FD6001624B9 /* color-pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color-pointer.png"; sourceTree = "<group>"; };
+		9A1CC0B3163C5FD6001624B9 /* color-wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color-wheel.png"; sourceTree = "<group>"; };
 		9A2649B315A0B9A4004A26F8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A2649B415A0B9A4004A26F8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A3A44DC1585287A00B188CA /* FilterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterFactory.h; sourceTree = "<group>"; };
 		9A3A44DD1585287A00B188CA /* FilterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterFactory.m; sourceTree = "<group>"; };
 		9A41173714CF4FD100D3D942 /* AbsVideoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsVideoFilter.h; sourceTree = "<group>"; };
 		9A41173814CF4FD100D3D942 /* AbsVideoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsVideoFilter.m; sourceTree = "<group>"; };
+		9A49B79D166035DA00D82111 /* OperationQueueFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationQueueFilter.h; sourceTree = "<group>"; };
+		9A49B79E166035DB00D82111 /* OperationQueueFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationQueueFilter.m; sourceTree = "<group>"; };
+		9A49B7A116603AA800D82111 /* OperationQueueFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationQueueFilterController.h; sourceTree = "<group>"; };
+		9A49B7A216603AA800D82111 /* OperationQueueFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationQueueFilterController.m; sourceTree = "<group>"; };
+		9A49B7A316603AA800D82111 /* OperationQueueFilterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperationQueueFilterController.xib; sourceTree = "<group>"; };
 		9A57941614D376500006EE0F /* Interface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Interface.xib; sourceTree = "<group>"; };
 		9A57941914D378660006EE0F /* InterfaceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceWindowController.h; sourceTree = "<group>"; };
 		9A57941A14D378660006EE0F /* InterfaceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceWindowController.m; sourceTree = "<group>"; };
@@ -96,6 +127,19 @@
 		9AC4F7DE14C374AC001E9D71 /* VideoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWindowController.m; sourceTree = "<group>"; };
 		9AC4F7E314C38A14001E9D71 /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = ../PlayerModel.h; sourceTree = "<group>"; };
 		9AC4F7E414C38A14001E9D71 /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerModel.m; path = ../PlayerModel.m; sourceTree = "<group>"; };
+		9AEEE92B1656AC150025DFAB /* GCDFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDFilter.h; sourceTree = "<group>"; };
+		9AEEE92C1656AC150025DFAB /* GCDFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDFilter.m; sourceTree = "<group>"; };
+		9AEEE92F1656EDD50025DFAB /* GCDFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDFilterController.h; sourceTree = "<group>"; };
+		9AEEE9301656EDD50025DFAB /* GCDFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDFilterController.m; sourceTree = "<group>"; };
+		9AEEE9311656EDD50025DFAB /* GCDFilterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDFilterController.xib; sourceTree = "<group>"; };
+		9AEEE9341656FBE10025DFAB /* OpenCLFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLFilterController.h; sourceTree = "<group>"; };
+		9AEEE9351656FBE10025DFAB /* OpenCLFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCLFilterController.m; sourceTree = "<group>"; };
+		9AEEE9361656FBE10025DFAB /* OpenCLFilterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenCLFilterController.xib; sourceTree = "<group>"; };
+		9AF2B32A164FF5450008B536 /* NSThreadFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadFilter.h; sourceTree = "<group>"; };
+		9AF2B32B164FF5450008B536 /* NSThreadFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadFilter.m; sourceTree = "<group>"; };
+		9AF2B32E165062CF0008B536 /* NSThreadFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadFilterController.h; sourceTree = "<group>"; };
+		9AF2B32F165062CF0008B536 /* NSThreadFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadFilterController.m; sourceTree = "<group>"; };
+		9AF2B330165062CF0008B536 /* NSThreadFilterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadFilterController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A70A67D16769AFD005A8CF8 /* OpenCL.framework in Frameworks */,
 				9AC4F7B114C358FE001E9D71 /* SenTestingKit.framework in Frameworks */,
 				9AC4F7B214C358FE001E9D71 /* Cocoa.framework in Frameworks */,
 			);
@@ -140,6 +185,15 @@
 				9A41173814CF4FD100D3D942 /* AbsVideoFilter.m */,
 				9A89EC7314F3010B0028D6BC /* SingleThreadedFilter.h */,
 				9A89EC7414F3010B0028D6BC /* SingleThreadedFilter.m */,
+				9AF2B32A164FF5450008B536 /* NSThreadFilter.h */,
+				9AF2B32B164FF5450008B536 /* NSThreadFilter.m */,
+				9AEEE92B1656AC150025DFAB /* GCDFilter.h */,
+				9AEEE92C1656AC150025DFAB /* GCDFilter.m */,
+				9A49B79D166035DA00D82111 /* OperationQueueFilter.h */,
+				9A49B79E166035DB00D82111 /* OperationQueueFilter.m */,
+				9A1979C9166D26E5001108CC /* OpenCLFilter.h */,
+				9A1979CA166D26E5001108CC /* OpenCLFilter.m */,
+				9A1979D5166E7A0D001108CC /* filterKernel.cl */,
 			);
 			name = Filter;
 			sourceTree = "<group>";
@@ -151,6 +205,14 @@
 				9A89EC7014E9D2E20028D6BC /* VideoFilterController.m */,
 				9A183EDB158A56B700400447 /* SingleThreadFilterController.h */,
 				9A183EDC158A56B700400447 /* SingleThreadFilterController.m */,
+				9AF2B32E165062CF0008B536 /* NSThreadFilterController.h */,
+				9AF2B32F165062CF0008B536 /* NSThreadFilterController.m */,
+				9AEEE92F1656EDD50025DFAB /* GCDFilterController.h */,
+				9AEEE9301656EDD50025DFAB /* GCDFilterController.m */,
+				9AEEE9341656FBE10025DFAB /* OpenCLFilterController.h */,
+				9AEEE9351656FBE10025DFAB /* OpenCLFilterController.m */,
+				9A49B7A116603AA800D82111 /* OperationQueueFilterController.h */,
+				9A49B7A216603AA800D82111 /* OperationQueueFilterController.m */,
 			);
 			name = Filter;
 			sourceTree = "<group>";
@@ -216,6 +278,8 @@
 		9AC4F79614C358FE001E9D71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9A1CC0B2163C5FD6001624B9 /* color-pointer.png */,
+				9A1CC0B3163C5FD6001624B9 /* color-wheel.png */,
 				9AC4F79714C358FE001E9D71 /* Video Filter Processor-Info.plist */,
 				9AC4F79814C358FE001E9D71 /* InfoPlist.strings */,
 				9AC4F79B14C358FE001E9D71 /* main.m */,
@@ -259,10 +323,16 @@
 		9ACB68BE14C4E61C00822BFF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9A1CC0AE163C51CF001624B9 /* ColorWheel.h */,
+				9A1CC0AF163C51CF001624B9 /* ColorWheel.m */,
 				9AC4F7A714C358FE001E9D71 /* MainMenu.xib */,
 				9AC4F7A414C358FE001E9D71 /* Document.xib */,
 				9A57941614D376500006EE0F /* Interface.xib */,
 				9A183EDD158A56B800400447 /* SingleThreadFilterController.xib */,
+				9AEEE9361656FBE10025DFAB /* OpenCLFilterController.xib */,
+				9AEEE9311656EDD50025DFAB /* GCDFilterController.xib */,
+				9AF2B330165062CF0008B536 /* NSThreadFilterController.xib */,
+				9A49B7A316603AA800D82111 /* OperationQueueFilterController.xib */,
 				9A60D53F14CDF60000E0CC0F /* VideoFrameScreen.h */,
 				9A60D54014CDF60000E0CC0F /* VideoFrameScreen.m */,
 			);
@@ -326,7 +396,7 @@
 		9AC4F78214C358FD001E9D71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 9AC4F78514C358FD001E9D71 /* Build configuration list for PBXProject "Video Filter Processor" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -352,12 +422,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A70A67B167697BA005A8CF8 /* filterKernel.cl in Resources */,
 				9AC4F79A14C358FE001E9D71 /* InfoPlist.strings in Resources */,
 				9AC4F7A014C358FE001E9D71 /* Credits.rtf in Resources */,
 				9AC4F7A614C358FE001E9D71 /* Document.xib in Resources */,
 				9AC4F7A914C358FE001E9D71 /* MainMenu.xib in Resources */,
 				9A57941714D376500006EE0F /* Interface.xib in Resources */,
 				9A183EDF158A56B800400447 /* SingleThreadFilterController.xib in Resources */,
+				9A1CC0B4163C5FD6001624B9 /* color-pointer.png in Resources */,
+				9A1CC0B5163C5FD6001624B9 /* color-wheel.png in Resources */,
+				9AF2B332165062CF0008B536 /* NSThreadFilterController.xib in Resources */,
+				9AEEE9331656EDD50025DFAB /* GCDFilterController.xib in Resources */,
+				9AEEE9381656FBE10025DFAB /* OpenCLFilterController.xib in Resources */,
+				9A49B7A516603AA800D82111 /* OperationQueueFilterController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A15F55F163CB317001CA11C /* ColorWheel.m in Sources */,
 				9AC4F79C14C358FE001E9D71 /* main.m in Sources */,
 				9AC4F7A314C358FE001E9D71 /* Document.m in Sources */,
 				9AC4F7DF14C374AC001E9D71 /* VideoWindowController.m in Sources */,
@@ -404,6 +482,15 @@
 				9A3A44DE1585287A00B188CA /* FilterFactory.m in Sources */,
 				9A183EDE158A56B800400447 /* SingleThreadFilterController.m in Sources */,
 				9A2649B515A0B9A4004A26F8 /* AppDelegate.m in Sources */,
+				9AF2B32C164FF5460008B536 /* NSThreadFilter.m in Sources */,
+				9AF2B331165062CF0008B536 /* NSThreadFilterController.m in Sources */,
+				9AEEE92D1656AC150025DFAB /* GCDFilter.m in Sources */,
+				9AEEE9321656EDD50025DFAB /* GCDFilterController.m in Sources */,
+				9AEEE9371656FBE10025DFAB /* OpenCLFilterController.m in Sources */,
+				9A49B79F166035DB00D82111 /* OperationQueueFilter.m in Sources */,
+				9A49B7A416603AA800D82111 /* OperationQueueFilterController.m in Sources */,
+				9A1979CB166D26E5001108CC /* OpenCLFilter.m in Sources */,
+				9A1979D6166E7A0D001108CC /* filterKernel.cl in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +500,7 @@
 			files = (
 				9AC4F7BD14C358FE001E9D71 /* Video_Filter_ProcessorTests.m in Sources */,
 				9AC4F7E614C38A14001E9D71 /* PlayerModel.m in Sources */,
+				9A1CC0B0163C51CF001624B9 /* ColorWheel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +606,7 @@
 		9AC4F7C114C358FE001E9D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
 				INFOPLIST_FILE = "Video Filter Processor/Video Filter Processor-Info.plist";
@@ -529,6 +618,7 @@
 		9AC4F7C214C358FE001E9D71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
 				INFOPLIST_FILE = "Video Filter Processor/Video Filter Processor-Info.plist";
@@ -541,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Video Filter Processor.app/Contents/MacOS/Video Filter Processor";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";
@@ -555,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Video Filter Processor.app/Contents/MacOS/Video Filter Processor";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Video Filter Processor/Video Filter Processor-Prefix.pch";

@@ -7,7 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PlayerModel.h"
+#import "VideoFilterController.h"
+#import "InterfaceWindowController.h"
+@interface Document : NSDocument <NSWindowDelegate>{
+    NSWindowController* mainWindowController;
+    InterfaceWindowController* uiController;
+    VideoFilterController* filterController;
+}
 
-@interface Document : NSDocument
+@property (retain) PlayerModel *player;
 
+-(void)setFilter:(VideoFilterController*)filter;
 @end
