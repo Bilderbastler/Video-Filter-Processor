@@ -7,12 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "Document.h"
-#import "FilterFactory.h"
+#import "FilterDocument.h"
 
 @implementation AppDelegate
 @synthesize activeItem;
-
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        factory = [[FilterFactory alloc] init];
+    }
+    return self;
+}
 
 /*
  - (void)applicationDidFinishLaunching:(NSNotification *)notification{
@@ -54,8 +60,7 @@
     [self.activeItem setState:NSOnState];
     NSLog(@"Sender: %ld", sender.tag);
     
-    Document * document = (Document*)[[NSDocumentController sharedDocumentController]currentDocument];
-    FilterFactory* factory = [[FilterFactory alloc] init];
+    FilterDocument * document = (FilterDocument*)[[NSDocumentController sharedDocumentController]currentDocument];
     VideoFilterController* filter;
     
     switch (sender.tag) {
@@ -81,7 +86,12 @@
     
     [document setFilter:filter];
     
-    [factory release];
     self.activeItem = sender;
+}
+
+- (void)dealloc
+{
+    [factory release];
+    [super dealloc];
 }
 @end

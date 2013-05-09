@@ -2,11 +2,13 @@
 //  FilterWindowController.m
 //  Video Filter Processor
 //
-//  Created by Florian Neumeister on 15.01.12.
+//  Created by  Neumeister on 15.01.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "VideoWindowController.h"
+
+static void* fpsContext;
 
 @implementation VideoWindowController
 @synthesize frameRate;
@@ -14,7 +16,10 @@
     self = [super initWithWindowNibName:windowNibName];
     if (self) {
         self.frameRate = 0;
-        lastFramesTimeOffsets = [[NSMutableArray arrayWithObject:@0] retain];
+        self.fpsCounter = [[[FrameRateCounter alloc]init] autorelease];
+        
+        [self.fpsCounter addObserver:self forKeyPath:@"frameRate" options:NSKeyValueObservingOptionNew context:fpsContext];
+        
     }
     
     return self;
@@ -24,10 +29,14 @@
 {
     [super windowDidLoad];
     
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    //Listen for new processed frames to display
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(showFrame:)
+                                                 name:@"NewFrameProcessed"
+                                               object:nil];
     
 }
+
 
 -(void)showFrame:(NSNotification*)notification{
     if ([[notification object] isKindOfClass:[CIImage class]]) {
@@ -36,26 +45,24 @@
         
     }
 }
+
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"currentFramesPerSecond"]) {
-        if ([change valueForKey:@"new"] != [NSNull null]) {
-            id newValue = [change valueForKey:@"new"];
-            [lastFramesTimeOffsets addObject:newValue];
-            
-            // update the displayed frame rate with the average of the latest framerate values
-            // and only when enough data was collected
-            if ([lastFramesTimeOffsets count] > sumOfFrames) {
-                NSNumber * sum = [lastFramesTimeOffsets valueForKeyPath:@"@sum.self"];
-                [lastFramesTimeOffsets removeAllObjects];
-                self.frameRate = [sum floatValue]  / sumOfFrames;
-            }
-        }
+    if (context == fpsContext) {
+        // better be sure we are on the main tread before change stuff that influcences the UI
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.frameRate = self.fpsCounter.frameRate;
+        });
+        
     }
 }
 
+
 - (void)dealloc
 {
-    [lastFramesTimeOffsets release];
+    [self.fpsCounter removeObserver:self forKeyPath:@"frameRate" context:fpsContext];
+    self.fpsCounter = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"NewFrameProcessed" object:nil];
     [super dealloc];
 }
 

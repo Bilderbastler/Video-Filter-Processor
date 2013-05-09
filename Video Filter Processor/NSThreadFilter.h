@@ -14,11 +14,11 @@
     NSMutableArray* _threads;
     NSNumber* _numberOfThreads;
     NSCondition* workerLock;
-    NSCondition* dispatcherLock;
+    NSCondition* producerLock;
     // nummber of workitems that where not claimed by threats yet
-    NSUInteger workItems;
+    volatile int workItems;
     // number of workitems that where not yet finished
-    NSUInteger unfinishedWorkItems;
+    volatile int unfinishedWorkItems;
 }
 @property(nonatomic, retain) NSNumber* numberOfThreads;
 

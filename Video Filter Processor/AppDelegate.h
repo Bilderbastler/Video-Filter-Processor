@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FilterFactory.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    FilterFactory* factory;
+}
 @property (nonatomic, assign) NSMenuItem* activeItem;
 - (IBAction)setFilter:(NSMenuItem *)sender;
 @end

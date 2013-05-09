@@ -18,7 +18,7 @@
         _numberOfThreads = @1;
         _threads = [[NSMutableArray alloc] init];
         workerLock = [[NSCondition alloc] init];
-        dispatcherLock = [[NSCondition alloc] init];
+        producerLock = [[NSCondition alloc] init];
         
     }
     return self;
@@ -31,10 +31,11 @@
         
         if([threadNumber intValue] < 1){
             [newValue release];
-            _numberOfThreads = @1;
-        }else{
-            _numberOfThreads = newValue;
+            newValue = [@1 retain];
         }
+        [self willChangeValueForKey:@"numberOfThreads"];
+        _numberOfThreads = newValue;
+        [self didChangeValueForKey:@"numberOfThreads"];
     }
 }
 
@@ -48,23 +49,20 @@
     
     [self updateAmoutOfThreads];
     // set workitem amount 
-    unfinishedWorkItems = [_threads count];
-    workItems = [_threads count];
+    unfinishedWorkItems = (unsigned int) [_threads count];
+    workItems = (unsigned int)[_threads count];
     
-    // send as many signals as there are worker threats, so that every threat wakes up
-    for (int i = 0; i < workItems; i++){
-        [workerLock signal];
-    }
+    // send  signals to all worker threats, so that every threat wakes up
+    [workerLock broadcast];
 
     [workerLock unlock];
     
-    
     // wait for the finished image
-    [dispatcherLock lock];
+    [producerLock lock];
     while (unfinishedWorkItems > 0) {
-        [dispatcherLock wait];
+        [producerLock wait];
     }
-    [dispatcherLock unlock];
+    [producerLock unlock];
 }
 /* 
  create or remove threads according to the numberOfThreads property 
@@ -74,7 +72,7 @@
         NSThread* t;
         // add more threads if nessesary
         while ([_threads count] < [self.numberOfThreads intValue]) {
-            t = [[NSThread alloc]initWithTarget:self selector:@selector(workerThreadStartPoint) object:nil];
+            t = [[[NSThread alloc]initWithTarget:self selector:@selector(workerThreadStartPoint) object:nil] autorelease];
             NSString* n = [NSString stringWithFormat:@"Workerthread %li", [_threads count]];
             [t setName: n];
             [t start];
@@ -95,11 +93,11 @@
     while (1) {
         // wait for work
         [workerLock lock];
-        [dispatcherLock lock];
+        [producerLock lock];
         if (unfinishedWorkItems == 0) {
-            [dispatcherLock signal];
+            [producerLock signal];
         }
-        [dispatcherLock unlock];
+        [producerLock unlock];
         while (workItems <= 0) {
             [workerLock wait];
         }
@@ -111,27 +109,33 @@
         rowEnd = rowEnd > bufferHeight ? bufferHeight : rowEnd;
         
         workItems--;
+        //OSAtomicDecrement32Barrier(&workItems);
         [workerLock unlock];
         for (size_t row = rowStart; row < rowEnd; ++row) {
             for (size_t column = 0; column < bufferWidth; ++column) {
                 // calculates the adress of the pixel in memory
                 unsigned char *pixel = base + (row * bytesPerRow) + (column * bytesPerPixel);
+                [self calculateCorrectionForPixel:pixel];
+                /*
                 pixel[1] = [self calculateCorrectionForChannel:pixel[1] lift:self.blacks.r gamma:self.mids.r gain:self.highlights.r];
                 pixel[2] = [self calculateCorrectionForChannel:pixel[2] lift:self.blacks.g gamma:self.mids.g gain:self.highlights.g];
                 pixel[3] = [self calculateCorrectionForChannel:pixel[3] lift:self.blacks.b gamma:self.mids.b gain:self.highlights.b];
+                 */
             }
         }
-        unfinishedWorkItems--;
+        OSAtomicDecrement32Barrier(&unfinishedWorkItems);
+        //unfinishedWorkItems--;
     }
 }
 
-
-
 -(void)dealloc{
+    // terminate all threads
+    [_threads makeObjectsPerformSelector:@selector(cancel)];
+    
     [_threads dealloc];
     [_numberOfThreads dealloc];
     [workerLock dealloc];
-    [dispatcherLock dealloc];
+    [producerLock dealloc];
     [super dealloc];
     
 }

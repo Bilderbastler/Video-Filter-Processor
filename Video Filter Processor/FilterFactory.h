@@ -2,7 +2,7 @@
 //  FilterFactory.h
 //  Video Filter Processor
 //
-//  Created by Florian Neumeister on 10.06.12.
+//  Created by  Neumeister on 10.06.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

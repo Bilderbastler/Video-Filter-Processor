@@ -22,8 +22,11 @@ __kernel void imageVideoFilter(read_only image2d_t input, write_only image2d_t o
     
     pixel = pixel / 255.0f;
     
+   /*
     pixel = pixel * (highlights + 1.0f); // highlights
     pixel = pixel + shadows; // shadows
+    */
+    pixel = mad(pixel, highlights + 1.0f, shadows);
     
     pixel = clamp(pixel, 0.0f, 1.0f);
     
@@ -50,8 +53,12 @@ __kernel void bufferVideoFilter(__global unsigned char*  input, __global unsigne
     
     pixel = pixel / 255.0f;
     
+    /*
     pixel = pixel * (highlights + 1.0f); // highlights
     pixel = pixel + shadows; // shadows
+    */
+    
+    pixel = mad(pixel, highlights + 1.0f, shadows);
     
     pixel = clamp(pixel, 0.0f, 1.0f);
 //    pixel = pow(pixel, (1.0f - mids)); // gamma die orginal pow() funktion ist zu kostspielig, powr() und half_powr() sind nur 1 FPS schneller

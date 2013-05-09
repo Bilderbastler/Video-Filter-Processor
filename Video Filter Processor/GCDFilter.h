@@ -14,12 +14,12 @@ enum DispatchMethod {
 };
 
 @interface GCDFilter : AbsVideoFilter{
-    dispatch_queue_t queue;
+    dispatch_queue_t _queue;
     long _queuePriority;
+    unsigned int _linesPerTask;
 }
 
-@property(atomic, assign)unsigned int linesPerTask;
-@property(nonatomic, readonly)size_t lines;
+@property unsigned int tasks;
 @property long queuePriority;
 @property (nonatomic) int dispatchMethod;
 @end

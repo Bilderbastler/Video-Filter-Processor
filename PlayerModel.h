@@ -2,7 +2,7 @@
 //  PlayerModel.h
 //  Video Filter Processor
 //
-//  Created by Florian Neumeister on 15.01.12.
+//  Created by  Neumeister on 15.01.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

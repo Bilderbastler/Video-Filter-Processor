@@ -11,32 +11,26 @@
 
 
 @implementation GCDFilter
-@synthesize linesPerTask;
+@synthesize tasks;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        self.linesPerTask = 100;
+        self.tasks = 10;
+        self.lines = 1000; // a default value, so there is no error
         self.queuePriority = DISPATCH_QUEUE_PRIORITY_DEFAULT;
         self.dispatchMethod = dispatchMethodGroup;
-        queue = dispatch_get_global_queue(self.queuePriority, 0);
+        _queue = dispatch_get_global_queue(self.queuePriority, 0);
     }
     return self;
 }
 
--(size_t)lines{
-    return bufferHeight;
-}
 
 -(void)runAlgorithm{
-    [self willChangeValueForKey:@"lines"];
-    // well the change actually allready happend in the parent class…
-    [self didChangeValueForKey:@"lines"];
-    
-    // calculate start and end of the block that we want to work on
-    NSUInteger rows = self.linesPerTask; // avoid calling linesPerOperation more than onces for unnessesary lock overhead
-    int blocks = ceil(bufferHeight / rows);
+  
+    int blocks = self.tasks;
+    NSUInteger rowsInBlock = ceilf((float)bufferHeight / (float)blocks);
     
     if (self.dispatchMethod == dispatchMethodGroup) { 
     
@@ -44,24 +38,8 @@
         
         // now for the enqeueing process…
         for (int i = 0; i < blocks; i++) {
-            
-            NSUInteger startRow = i * rows;
-            NSUInteger endRow = startRow + rows;
-            // make sure we don't go over the legal maximum
-            endRow = endRow > bufferHeight ? bufferHeight : endRow;
-            
-            // enqeue the work
-            dispatch_group_async(group, queue, ^(void) {
-                for (size_t row = startRow; row < endRow; ++row) {
-                    for (size_t column = 0; column < bufferWidth; ++column) {
-                        
-                        // calculates the adress of the pixel in memory
-                        unsigned char *pixel = base + (row * bytesPerRow) + (column * bytesPerPixel);
-                        pixel[1] = [self calculateCorrectionForChannel:pixel[1] lift:self.blacks.r gamma:self.mids.r gain:self.highlights.r];
-                        pixel[2] = [self calculateCorrectionForChannel:pixel[2] lift:self.blacks.g gamma:self.mids.g gain:self.highlights.g];
-                        pixel[3] = [self calculateCorrectionForChannel:pixel[3] lift:self.blacks.b gamma:self.mids.b gain:self.highlights.b];
-                    }
-                }
+            dispatch_group_async(group, _queue, ^(void) {
+                [self executeBlock:i linesInBlock:rowsInBlock];
             });
         }
         
@@ -71,34 +49,38 @@
         dispatch_release(group);    
        
     } else if(self.dispatchMethod == dispatchMethodApply){
-        dispatch_apply(blocks, queue, ^(size_t idx) {
-            NSUInteger startRow = idx * rows;
-            NSUInteger endRow = startRow + rows;
-            // make sure we don't go over the legal maximum
-            endRow = endRow > bufferHeight ? bufferHeight : endRow;
-            for (size_t row = startRow; row < endRow; ++row) {
-                for (size_t column = 0; column < bufferWidth; ++column) {
-                    
-                    // calculates the adress of the pixel in memory
-                    unsigned char *pixel = base + (row * bytesPerRow) + (column * bytesPerPixel);
-                    pixel[1] = [self calculateCorrectionForChannel:pixel[1] lift:self.blacks.r gamma:self.mids.r gain:self.highlights.r];
-                    pixel[2] = [self calculateCorrectionForChannel:pixel[2] lift:self.blacks.g gamma:self.mids.g gain:self.highlights.g];
-                    pixel[3] = [self calculateCorrectionForChannel:pixel[3] lift:self.blacks.b gamma:self.mids.b gain:self.highlights.b];
-                }
-            }
+        dispatch_apply(blocks, _queue, ^(size_t idx) {
+            [self executeBlock:idx linesInBlock:rowsInBlock];
         });
     }
     
 }
 
--(void)loopThroughLinesWithIndex:(NSUInteger) idx{
-    
+-(void)executeBlock:(size_t)idx linesInBlock:(size_t)rows{
+    NSUInteger startRow = idx * rows;
+    NSUInteger endRow = startRow + rows;
+    // make sure we don't go over the legal maximum
+    endRow = fminf(endRow, bufferHeight);
+    for (size_t row = startRow; row < endRow; ++row) {
+        for (size_t column = 0; column < bufferWidth; ++column) {
+            
+            // calculates the adress of the pixel in memory
+            unsigned char *pixel = base + (row * bytesPerRow) + (column * bytesPerPixel);
+            [self calculateCorrectionForPixel:pixel];
+            
+            /*
+             pixel[1] = [self calculateCorrectionForChannel:pixel[1] lift:self.blacks.r gamma:self.mids.r gain:self.highlights.r];
+             pixel[2] = [self calculateCorrectionForChannel:pixel[2] lift:self.blacks.g gamma:self.mids.g gain:self.highlights.g];
+             pixel[3] = [self calculateCorrectionForChannel:pixel[3] lift:self.blacks.b gamma:self.mids.b gain:self.highlights.b];
+             */
+        }
+    }
 }
 
 -(void)setQueuePriority:(long)queuePriority{
     [self willChangeValueForKey:@"queuePriority"];
     _queuePriority = queuePriority;
-    queue = dispatch_get_global_queue(queuePriority, 0);
+    _queue = dispatch_get_global_queue(queuePriority, 0);
     [self didChangeValueForKey:@"queuePriority"];
     NSLog(@"Priorität geändert");
 }

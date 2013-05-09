@@ -2,11 +2,13 @@
 //  PlayerModel.m
 //  Video Filter Processor
 //
-//  Created by Florian Neumeister on 15.01.12.
+//  Created by  Neumeister on 15.01.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "PlayerModel.h"
+void* newFilterContext;
+
 @interface PlayerModel()
 /** private method for setting up the avfoundation components to read the video file */
 -(BOOL)setupReader;
@@ -20,13 +22,15 @@
     if (self) {
         self.aborted = NO;
         //create a serial queue for the finished frames
-        frameQueue = dispatch_queue_create("de.florianneumeister.videofilterprocessor.framequeue", NULL);
+        frameQueue = dispatch_queue_create("de.neumeister.videofilterprocessor.framequeue", DISPATCH_QUEUE_SERIAL);
         dispatch_retain(frameQueue);
         limitPlaybackToFramerate = NO;
+        [self addObserver:self forKeyPath:@"filter" options:NSKeyValueObservingOptionNew context:newFilterContext];
     }
     return self;
 }
 - (void)dealloc {
+    [self removeObserver:self forKeyPath:@"filter" context:newFilterContext];
     dispatch_release(frameQueue);
     [self reset];
     [super dealloc];
@@ -121,45 +125,52 @@
             }
             dispatch_sync(frameQueue, ^{
                 // we are no longer within the run loop so we need our own release pool
-                NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-                
-                frameNr++;
-                // process the frame
-                __block CMSampleBufferRef sampleBuffer = [output copyNextSampleBuffer];
-                if (sampleBuffer != NULL) {
-                    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-                    if (imageBuffer && (CFGetTypeID(imageBuffer) == CVPixelBufferGetTypeID())) {
-                        CVPixelBufferRef pixelBuffer = (CVPixelBufferRef)imageBuffer;
-                        CVPixelBufferLockBaseAddress(pixelBuffer, 0);
-
-                        // the magic happens here:
-                        pixelBuffer = [self.filter processBuffer:pixelBuffer];
+                @autoreleasepool {
+                    frameNr++;
+                    // process the frame
+                    __block CMSampleBufferRef sampleBuffer = [output copyNextSampleBuffer];
+                    if (sampleBuffer != NULL) {
+                        CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+                        if (imageBuffer && (CFGetTypeID(imageBuffer) == CVPixelBufferGetTypeID())) {
+                            CVPixelBufferRef pixelBuffer = (CVPixelBufferRef)imageBuffer;
+                            CVPixelBufferLockBaseAddress(pixelBuffer, 0);
+                            
+                            // the magic happens here:
+                            pixelBuffer = [self.filter processBuffer:pixelBuffer];
+                            
+                            CIImage *frame = [CIImage imageWithCVImageBuffer:imageBuffer];
+                            
+                            CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
+                            
+                            // now we are on the main thread so we can safely interact with the GUI
+                            dispatch_sync(dispatch_get_main_queue(), ^(void){
+                                //tell the world there is a new frame around
+                                [[NSNotificationCenter defaultCenter] postNotificationName:@"NewFrameProcessed" object:frame];
+                            });
+                            //clean up
+                            CFRelease(sampleBuffer);
+                            sampleBuffer = NULL;
+                        }
                         
-                        CIImage *frame = [CIImage imageWithCVImageBuffer:imageBuffer];
-                        
-                        CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
-                        
-                        // now we are on the main thread so we can safely interact with the GUI
-                        dispatch_async(dispatch_get_main_queue(), ^(void){
-                            //tell the world there is a new frame around
-                            [[NSNotificationCenter defaultCenter] postNotificationName:@"NewFrameProcessed" object:frame];                                
-                        });        
-                        //clean up
-                        CFRelease(sampleBuffer);
-                        sampleBuffer = NULL;
-                        [pool drain];
-                    }                                                    
-                }else{
-                    finished = YES;
-                    NSLog(@"%@", [[reader error]description]);
-                }
-            });
-        }
-    }
+                    }else{
+                        finished = YES;
+                        NSLog(@"%@", [[reader error]description]);
+                    }
+                } // drain autorelease pool
+            }); // end dispatch block
+        } // end while
+    } // end if
     return finished && success;
 }
 
-
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == newFilterContext) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEW_FILTER_NOTIFICATION object:self.filter];
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
 
 -(void)reset{
     [output release];
